@@ -1,5 +1,7 @@
 Jared Vitug | Movie App - Setup Guide
 
+Github repo link: https://github.com/jevitug/Movie-App
+
 I deployed this application with firebase(https://movie-app-845d8.firebaseapp.com).
 Since the user is pre-defined and there wasn't a need for a registration/login page,
 I kept the data on the client side, saving the user's info in localStorage.  This way,
