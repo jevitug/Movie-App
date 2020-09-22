@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Collection App</title>
+        <style>
+            h1{
+                font-family: sans-serif;
+            }
+            #movieTable, #movieTable td, #movieTable th{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th{
+                background-color: rgb(0, 118, 131);
+                color: #ffffff;
+                height: 50px;
+            }
+            #movieTable{
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                font-family: sans-serif;
+            }
+            #totalResults{
+                text-align: center;
+                font-weight: bold;
+            }
+            #searchBar{
+                display: block;
+                text-align: center;
+                padding: 8px;
+            }
+            th, td{
+                padding: 12px 15px;
+            }
+            td{
+                text-align: center;
+            }
+            tr:nth-of-type(even){
+                background-color: #f3f3f3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="display:block; text-align: center; padding: 10px;">Create Your Own Personalized Set of Movies!!!</h1>
+        <script src="./movies.js"></script>
+        <div id="searchBar">
+            <input type="text" id="keyword" placeholder="Search...">
+            <button type="button" id="searchButton" onclick="searchMovie(keyword.value)">Search</button>
+            <button type="button" id="saveButton" onclick="saveMovies()">Save Movies</button>
+        </div>
+        <table id="movieTable">
+            <colgroup>
+                <col span="1" style="width: 3%;">
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 7%;">
+                <col span="1" style="width: 80%;">
+            </colgroup>
+            <tr>
+                <th>Owned?<input type="checkbox" id="selectAll" onclick="selectAll(this)"></th>
+                <th>Movie Title</th>
+                <th>Release Date</th>
+                <th>Overview</th>
+            </tr>
+        </table>
+        <p id="totalResults"></p>
+        <footer>
+            <p style="text-align: center;">This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
+        </footer>
+    </body>
+</html>
